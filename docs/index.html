@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rafiq Innovations Order Management System — portfolio web demo by Mahid Rafiq." />
+  <title>Rafiq Innovations | Order Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#top"><span>RI</span> Rafiq Innovations</a>
+      <nav>
+        <a href="#products">Products</a>
+        <a href="#order">Order</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#project">Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">ORDER MANAGEMENT SYSTEM</p>
+        <h1>Turn product orders into a <span>clean workflow.</span></h1>
+        <p class="lead">A portfolio-grade order management project built with Python and SQLite, with this interactive web preview deployed through GitHub Pages.</p>
+        <div class="actions">
+          <a class="btn primary" href="#order">Try the demo</a>
+          <a class="btn secondary" href="https://github.com/mahidrafiq/Rafiq-Innovations-Order-Management" target="_blank" rel="noopener">View source ↗</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="terminal-head"><i></i><i></i><i></i><span>order_system</span></div>
+        <div class="terminal-body">
+          <p><b>$</b> python main.py</p>
+          <p class="muted">Rafiq Innovations — Order Management</p>
+          <p><b>✓</b> Product catalogue loaded</p>
+          <p><b>✓</b> SQLite database ready</p>
+          <p><b>✓</b> Order validation enabled</p>
+          <p><b>→</b> Ready to accept orders</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section container">
+      <div class="section-heading">
+        <div><p class="eyebrow">CATALOGUE</p><h2>Products</h2></div>
+        <p>Sample catalogue data for the portfolio project.</p>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <section id="order" class="section section-dark">
+      <div class="container order-layout">
+        <div>
+          <p class="eyebrow">INTERACTIVE DEMO</p>
+          <h2>Create a sample order</h2>
+          <p class="muted">This browser demo mirrors the core order flow. It uses your browser's local storage only; the production Python application persists orders in SQLite.</p>
+        </div>
+        <form id="orderForm" class="order-card">
+          <label>Customer name<input id="customer" type="text" placeholder="e.g. Ahmad Khan" required /></label>
+          <label>Product<select id="product" required></select></label>
+          <label>Quantity<input id="quantity" type="number" min="1" max="999" value="1" required /></label>
+          <div class="total-row"><span>Total</span><strong id="total">₹0</strong></div>
+          <button class="btn primary full" type="submit">Place sample order</button>
+          <p id="message" class="message" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="workflow" class="section container">
+      <div class="section-heading">
+        <div><p class="eyebrow">HOW IT WORKS</p><h2>Simple, structured workflow</h2></div>
+      </div>
+      <div class="workflow">
+        <div class="step"><span>01</span><h3>Catalogue</h3><p>Products and prices are defined in the application.</p></div>
+        <div class="step"><span>02</span><h3>Validate</h3><p>Customer names, products and quantities are checked before saving.</p></div>
+        <div class="step"><span>03</span><h3>Persist</h3><p>Orders are stored using parameterized SQLite queries.</p></div>
+        <div class="step"><span>04</span><h3>Review</h3><p>Recent orders can be retrieved for quick operational review.</p></div>
+      </div>
+    </section>
+
+    <section id="project" class="section container project-section">
+      <div class="project-panel">
+        <div>
+          <p class="eyebrow">TECHNICAL STACK</p>
+          <h2>Built for a real-world workflow</h2>
+          <p>Python handles the application logic, SQLite provides persistent local storage, and this static interface gives recruiters and visitors a fast way to understand the project without installing anything.</p>
+        </div>
+        <div class="chips"><span>Python</span><span>SQLite</span><span>SQL</span><span>Validation</span><span>GitHub</span><span>GitHub Pages</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Mahid Rafiq</span>
+      <a href="https://github.com/mahidrafiq" target="_blank" rel="noopener">github.com/mahidrafiq ↗</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
